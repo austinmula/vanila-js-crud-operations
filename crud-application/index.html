@@ -47,8 +47,16 @@
         </form>
         <div class="button-container">
           <button id="create-student">Create Student</button>
-          <button id="create-student">Update</button>
-          <button id="create-student">Delete</button>
+          <button id="create-student" title="Click table row to edit">
+            Update
+          </button>
+          <button
+            id="create-student"
+            title="Click table row to delete "
+            onclick="deleteStudent()"
+          >
+            Delete
+          </button>
         </div>
       </div>
       <div class="table-container">

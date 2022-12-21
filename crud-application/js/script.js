@@ -94,6 +94,7 @@ const saveToLocalStorage = (arr, new_Item) => {
     }
 };
 
+
 // EDIT FUNCTIONALITY
 table.onclick = () => {
     let row = table.rows;
@@ -106,16 +107,26 @@ table.onclick = () => {
 
 async function activateItem() {
     rowIndex = this.rowIndex;
-    // console.log(rowIndex)
+
     let student_id = document.querySelector("#student_id");
     let student_name = document.querySelector("#student_name");
     let student_email = document.querySelector("#student_email");
     let student_dob = document.querySelector("#student_dob");
-    // console.log(student_name.value)
-    // console.log(await this.cells[3].innerText)
 
     student_id.value = await this.cells[0].innerText;
     student_name.value = await this.cells[1].innerText;
     student_email.value = await this.cells[2].innerText;
     student_dob.value = await this.cells[3].innerText;
+    console.log(rowIndex)
 };
+
+const deleteStudent = () => {
+    const storage = JSON.parse(localStorage.getItem("student-data"))
+    let tableIndx = rowIndex - 1;
+
+    if (tableIndx) {
+        tableIndx && storage.splice(tableIndx, 1)
+        localStorage.setItem("student-data", JSON.stringify(storage));
+        createTableBody(storage)
+    }
+}
