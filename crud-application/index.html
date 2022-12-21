@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crud-application-javascript</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body onload="getStudents()">
+    <div class="container">
+      <h1>Students Registration</h1>
+      <div class="form-container">
+        <form action="">
+          <div class="form-control">
+            <input
+              type="number"
+              id="student_id"
+              placeholder="enter student id"
+              name="student_id"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              id="student_name"
+              placeholder="enter student full name"
+              name="student_name"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="email"
+              id="student_email"
+              placeholder="enter student email"
+              name="student_email"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="date"
+              id="student_dob"
+              placeholder="enter date of birth"
+              name="student_dob"
+            />
+          </div>
+        </form>
+        <div class="button-container">
+          <button id="create-student">Create Student</button>
+          <button id="create-student">Update</button>
+          <button id="create-student">Delete</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
