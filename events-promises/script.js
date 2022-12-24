@@ -1,3 +1,4 @@
+"use strict"
 const container = document.querySelector(".container");
 
 let size = 20
@@ -46,5 +47,30 @@ mypromise.then(message => {
     container.style.backgroundColor = "#FF4E00"
     console.log(message)
 })
+
+const item = 6
+console.log(6 + " hello")  // 6 hello
+
+console.log(typeof item)  //number
+
+const modified = item + " "
+
+console.log(typeof modified)  //string
+console.log(modified) //6
+
+let ans = (modified / 5).toFixed(3) // 1.200
+console.log(ans)
+console.log(typeof ans) //string
+
+console.log(typeof (parseInt(ans))) // number
+
+
+let a = 5
+let b = 71
+console.log(typeof (a / b).toFixed(5))
+
+
+
+
 
 
